@@ -1,4 +1,3 @@
-# KLH-CSIT-2026-27-2420090067-careerSync
 CareerSync: AI-Powered Career Development & Skill-Gap Intelligence Platform
 An intelligent career development platform that analyzes user skills, identifies skill gaps, recommends personalized learning paths, and matches users with relevant career opportunities.
 
