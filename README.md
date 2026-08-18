@@ -1,318 +1,469 @@
 # KLH-CSIT-2026-27-2420090067-careerSync
-# CareerSync: AI Resume Screening & Job Recommendation
-# Adaptive Software Engineering - 24CI3201
+CareerSync: AI-Powered Career Development & Skill-Gap Intelligence Platform
+An intelligent career development platform that analyzes user skills, identifies skill gaps, recommends personalized learning paths, and matches users with relevant career opportunities.
 
-## Project Overview
+Project Overview
+CareerSync is an AI-powered career development and skill-gap intelligence platform developed as part of the Adaptive Software Engineering course.
 
-CareerSync is an AI-powered resume screening and job recommendation system designed to automate the initial recruitment process and help candidates identify suitable job roles.
+Unlike traditional resume screening and job recommendation systems, CareerSync focuses on continuous career development rather than simply matching resumes with job descriptions.
 
-The system uses Machine Learning and Natural Language Processing (NLP) techniques to analyze resumes, extract relevant skills and qualifications, classify candidate profiles, and recommend suitable job roles based on their skills and qualifications.
+The platform analyzes a user's:
 
+Education
+Technical and soft skills
+Resume
+Experience
+Career goals
+Learning progress
+Target job roles
+It then identifies missing skills, recommends personalized learning resources, provides career-readiness insights, and suggests suitable job roles.
 
+Problem Statement
+Students and early-career professionals often struggle to understand:
 
-## Abstract
+Which skills are required for their desired career
+Which skills they currently lack
+How far they are from being job-ready
+What they should learn next
+Which career paths match their current abilities
+How their skills compare with industry requirements
+Existing platforms often focus primarily on job searching or resume screening.
 
-CareerSync aims to provide an intelligent and efficient solution for automated resume screening and personalized job recommendation. Traditional recruitment processes often require significant time and manual effort to evaluate resumes and match candidates with appropriate job positions.
+CareerSync addresses this limitation by providing a continuous AI-driven career development system that connects:
 
-The proposed system automates this process by parsing resumes, extracting relevant information such as skills, education, experience, and qualifications, and applying Machine Learning techniques to classify candidate profiles. Based on the extracted features and predicted category, the system recommends suitable job roles to candidates.
+Skills → Skill Gaps → Learning → Progress → Career Readiness → Job Opportunities
 
-CareerSync can assist recruiters in reducing the time required for preliminary resume screening while providing candidates with relevant career opportunities. The project combines Python, Natural Language Processing, Machine Learning, Pandas, NumPy, Scikit-learn, and optionally Streamlit for the user interface.
+Objectives
+Analyze a user's existing skills and qualifications.
+Identify gaps between current skills and industry requirements.
+Recommend personalized learning paths.
+Calculate a career-readiness score.
+Recommend suitable job roles based on skills.
+Track skill development and learning progress.
+Provide AI-powered career insights.
+Adapt recommendations as the user's skills improve.
+Core Features
+1. Smart Career Profile
+Users can create a career profile containing:
 
----
+Education
+Technical skills
+Soft skills
+Certifications
+Projects
+Experience
+Career interests
+Target job roles
+2. AI Resume Analysis
+The system analyzes uploaded resumes and extracts relevant information such as:
 
-## Objectives
+Skills
+Education
+Experience
+Projects
+Certifications
+Technologies
+Job roles
+The extracted information can be used to automatically update the user's CareerSync profile.
 
-- Automate the initial screening of resumes.
-- Extract relevant candidate information from resumes.
-- Identify and classify candidate skills and qualifications.
-- Recommend suitable job roles based on candidate profiles.
-- Reduce the manual effort involved in preliminary recruitment screening.
-- Provide an easy-to-use interface for resume analysis and recommendations.
-- Demonstrate the practical application of Machine Learning and NLP in recruitment.
+3. Skill-Gap Intelligence
+CareerSync compares the user's current skills with the skills required for a selected career role.
 
----
+Example:
 
-## Key Features
+Target Role: Data Scientist
 
-### 1. Resume Parsing
+Current Skills:
+Python
+SQL
+Pandas
+NumPy
 
-Extract relevant information from uploaded resumes, including:
+Missing / Weak Skills:
+Machine Learning
+Statistics
+Scikit-learn
+Deep Learning
+The system generates a personalized Skill Gap Report.
 
-- Skills
-- Educational qualifications
-- Work experience
-- Certifications
-- Technical competencies
+4. Career Readiness Score
+CareerSync calculates an overall career-readiness score based on factors such as:
 
-### 2. Resume Classification
+Required skills
+Current proficiency
+Projects
+Certifications
+Experience
+Learning progress
+Example:
 
-Uses Machine Learning techniques to classify resumes according to relevant job or career categories.
+Career Readiness
 
-### 3. Job Recommendation
+78%
 
-Recommends suitable job roles by comparing candidate skills and qualifications with available job categories.
+Skill Match       82%
+Projects          75%
+Certifications    70%
+Experience        65%
+5. Personalized Learning Path
+Instead of giving every user the same learning roadmap, CareerSync generates a learning path based on individual skill gaps.
 
-### 4. Machine Learning Model
+Example:
 
-Uses supervised Machine Learning techniques for resume classification and recommendation.
+Python
+   |
+   v
+Statistics
+   |
+   v
+Machine Learning
+   |
+   v
+Scikit-learn
+   |
+   v
+ML Projects
+   |
+   v
+Data Scientist Readiness
+6. Job Role Recommendation
+The platform recommends career roles based on the user's current skill profile.
 
-### 5. User-Friendly Interface
+Example:
 
-Provides an interface through which users can upload resumes and obtain screening results and job recommendations.
+Recommended Roles
 
----
+1. Data Analyst        92% Match
+2. Business Analyst    86% Match
+3. Data Scientist      78% Match
+4. ML Engineer         65% Match
+7. Skill Progress Tracking
+Users can track their progress over time.
 
-## Technologies Used
+The dashboard can display:
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Natural Language Processing (NLP)
-- Streamlit
-- Matplotlib
-- Seaborn
+Skills acquired
+Skills improved
+Learning progress
+Career-readiness score
+Completed courses
+Projects completed
+Remaining skill gaps
+8. Adaptive Recommendations
+CareerSync continuously adapts recommendations according to the user's progress.
 
----
+Example:
 
-## Mandatory Repository Structure
+Before Learning
 
-The project follows the required repository structure:
+Python
+SQL
+Machine Learning - Not Completed
+Statistics - Not Completed
 
-copy
-
-
+        |
+        v
+
+User completes Machine Learning course
+
+        |
+        v
+
+CareerSync updates profile
+
+        |
+        v
+
+New Recommendation
+
+Deep Learning
+ML Projects
+Model Deployment
+This adaptive behavior is the core of the project's Adaptive Software Engineering concept.
+
+System Architecture
+                  +----------------------+
+                  |        User          |
+                  +----------+-----------+
+                             |
+                             v
+                  +----------------------+
+                  |    CareerSync UI     |
+                  +----------+-----------+
+                             |
+                             v
+                  +----------------------+
+                  | Profile & Resume     |
+                  | Analyzer             |
+                  +----------+-----------+
+                             |
+                             v
+                  +----------------------+
+                  | Skill Extraction &   |
+                  | Skill Mapping        |
+                  +----------+-----------+
+                             |
+                             v
+                  +----------------------+
+                  | Skill-Gap Intelligence|
+                  +----------+-----------+
+                             |
+              +--------------+--------------+
+              |              |              |
+              v              v              v
+        +-----------+  +------------+  +-------------+
+        | Learning  |  | Career     |  | Job         |
+        | Path      |  | Readiness  |  | Recommendation|
+        +-----+-----+  +------+-----+  +------+------+
+              |               |              |
+              +---------------+--------------+
+                              |
+                              v
+                  +----------------------+
+                  | Adaptive Career      |
+                  | Recommendation Engine|
+                  +----------------------+
+Technology Stack
+Frontend
+React.js
+HTML5
+CSS3
+JavaScript
+Tailwind CSS
+Backend
+Python
+FastAPI
+REST APIs
+AI and Machine Learning
+Python
+Scikit-learn
+Natural Language Processing
+Recommendation Algorithms
+Skill Matching
+Resume Parsing
+Database
+MongoDB / PostgreSQL
+Development Tools
+Git
+GitHub
+VS Code
+Postman
+Deployment
+Vercel
+Render
+AWS
+Project Structure
 CareerSync/
+|
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.jsx
+│   |
+│   ├── package.json
+│   └── README.md
 │
-├── src/
-│   └── Source code and application modules
+├── backend/
+│   ├── api/
+│   ├── models/
+│   ├── services/
+│   ├── routes/
+│   ├── main.py
+│   └── requirements.txt
 │
-├── docs/
-│   └── Project documentation and supporting documents
+├── ml/
+│   ├── skill_matching/
+│   ├── recommendation/
+│   ├── resume_parser/
+│   └── models/
 │
 ├── data/
-│   └── Datasets used for training and evaluation
+│   └── datasets/
 │
-├── results/
-│   └── Model outputs, evaluation results, and visualizations
+├── docs/
+│   ├── architecture/
+│   └── project_documentation/
 │
-├── reports/
-│   └── Project reports and academic documents
+├── tests/
 │
+├── .gitignore
 └── README.md
+Adaptive Software Engineering Approach
+CareerSync follows an adaptive development approach where the system continuously evolves according to:
 
-### Folder Description
+User feedback
+Skill progression
+Changing career goals
+Industry skill requirements
+Job-market trends
+Learning activity
+Adaptive Feedback Loop
+User Activity
+      |
+      v
+Skill Evaluation
+      |
+      v
+Gap Detection
+      |
+      v
+Recommendation
+      |
+      v
+Learning / Practice
+      |
+      v
+Progress Evaluation
+      |
+      v
+Updated Recommendations
+      |
+      +------------------+
+                         |
+                         v
+                    User Activity
+This feedback loop allows CareerSync to provide dynamic rather than static career recommendations.
 
-* src/ – Contains the source code, preprocessing modules, Machine Learning models, recommendation logic, and application files.
-* docs/ – Contains project documentation, diagrams, methodology, and supporting documents.
-* data/ – Contains datasets used for training, testing, and evaluation. If the dataset cannot be redistributed, a documented reference to the original data source will be provided.
-* results/ – Contains model predictions, evaluation metrics, graphs, visualizations, and experimental results.
-* reports/ – Contains project reports, research documentation, and final academic deliverables.
-* README.md – Contains the project overview, team information, setup instructions, execution instructions,
-and current project status.
+Example User Journey
+Step 1: Create Profile
+Education: B.Tech CSE
+Skills: Python, SQL, Excel
+Goal: Data Scientist
+Step 2: Career Analysis
+Current Career Readiness: 52%
+Step 3: Skill-Gap Detection
+Missing Skills:
 
----
+Statistics
+Machine Learning
+Scikit-learn
+Data Visualization
+Deep Learning
+Step 4: Personalized Roadmap
+Statistics
+   |
+   v
+Machine Learning
+   |
+   v
+Scikit-learn
+   |
+   v
+Data Visualization
+   |
+   v
+ML Projects
+Step 5: Progress Update
+After completing learning activities:
 
-## Team Members
+Career Readiness: 52% -> 74%
+Step 6: Updated Recommendation
+Next Focus:
 
-| Name            | ID Number   |
-| --------------- | ----------- |
-| Harshini S. R   | 2420030113  |
-| M. Pallavi      | 2420030373  |
-| G. Divija Medha | 2420030481  |
-| S. Saswitha     | 2420090067  |
+Advanced Machine Learning
+Model Deployment
+Deep Learning
+Innovation
+CareerSync improves upon conventional resume-screening and job-recommendation systems by combining multiple career-development capabilities into one platform.
 
----
+Key Innovations
+Dynamic Skill-Gap Intelligence
+Personalized Learning Roadmaps
+Adaptive Career Recommendations
+Career Readiness Scoring
+Continuous Skill Progress Tracking
+Resume-to-Skill Mapping
+Career Path Intelligence
+Feedback-Based Recommendation Updates
+The system does not simply answer:
 
-## Supervisor
+"Which job can I get?"
 
-Supervisor Name: Dr. Rajkumar Patil
+Instead, it answers:
 
----
+"What should I learn next to become ready for the career I want?"
 
-## System Workflow
+Target Users
+CareerSync is designed primarily for:
 
-copy
-
-
-Resume Upload
-      ↓
-Resume Parsing
-      ↓
-Text Preprocessing
-      ↓
-Skill & Feature Extraction
-      ↓
-Machine Learning Model
-      ↓
-Resume Classification
-      ↓
-Job Matching
-      ↓
-Job Recommendation
-      ↓
-Recommended Job Roles
+College students
+Fresh graduates
+Early-career professionals
+Career switchers
+Self-learners
+Job seekers
+Future Enhancements
+Potential future improvements include:
 
----
+Real-time job-market skill analysis
+LinkedIn profile integration
+AI career mentor
+Interview preparation
+AI-generated interview questions
+Project recommendations based on skill gaps
+Salary prediction
+Industry trend analysis
+Certification recommendations
+Skill verification
+Personalized mock interviews
+Multi-role career path comparison
+Expected Outcomes
+CareerSync aims to help users:
 
-## Installation and Setup
+Understand their current skill level
+Identify missing skills
+Create a personalized career roadmap
+Track career development
+Improve job readiness
+Discover suitable career opportunities
+Make informed career decisions
+Testing
+The project will include testing at different levels:
 
-### 1. Clone the Repository
+Unit Testing
+      |
+      v
+Integration Testing
+      |
+      v
+API Testing
+      |
+      v
+AI / Recommendation Testing
+      |
+      v
+UI Testing
+      |
+      v
+System Testing
+Testing will focus on:
 
-Bash
-
-
-git clone https://github.com/2420030113Harshini/KLH-CSE-2026-27-2420030113-CareerSync
-cd CareerSync
+Skill extraction accuracy
+Skill-gap detection
+Recommendation relevance
+Resume parsing
+API reliability
+User interface functionality
+Adaptive recommendation behavior
+Team Members
+Name	Roll Number
+Harshini	2420030113
+Pallavi	2420030373
+Divija	2420030481
+Saswitha	2420090067
+Project Status
+Currently Under Development
 
-### 2. Create a Virtual Environment
+This project is being developed as part of the Adaptive Software Engineering course.
 
-Bash
-
-
-python -m venv venv
+License
+This project is developed for academic and educational purposes as part of the Adaptive Software Engineering course.
 
-### 3. Activate the Virtual Environment
+Conclusion
+CareerSync combines AI-powered skill analysis, career readiness assessment, personalized learning, and adaptive job recommendations into a unified career development platform.
 
-#### Windows
+The primary goal is to help users understand where they currently stand, identify what they need to improve, and continuously adapt their career development journey toward their desired role.
 
-Bash
-
-
-venv\Scripts\activate
-
-#### Linux / macOS
-
-Bash
-
-
-source venv/bin/activate
-
-### 4. Install Dependencies
-
-Bash
-
-
-pip install -r requirements.txt
-
----
-
-## Execution
-
-### Using Python
-
-If the application is implemented as a standard Python application:
-
-Bash
-
-
-python src/app.py
-
-### Using Streamlit
-
-If Streamlit is used for the user interface:
-
-Bash
-
-
-streamlit run src/app.py
-
-After launching the application, upload a resume to analyze the candidate profile and generate suitable job recommendations.
-
----
-
-## Machine Learning Pipeline
-
-The system follows the following Machine Learning pipeline:
-
-1. Data Collection
-2. Data Cleaning
-3. Resume Text Preprocessing
-4. Feature Extraction
-5. Feature Engineering
-6. Model Training
-7. Resume Classification
-8. Job Matching
-9. Job Recommendation
-10. Model Evaluation
-
----
-
-## Model Evaluation
-
-The Machine Learning model will be evaluated using appropriate classification metrics, including:
-
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
-
-Additional evaluation metrics may be included depending on the final model and dataset.
-
----
-
-## Dataset
-
-The data/ directory contains the datasets used for training and evaluation.
-
-If the dataset is obtained from an external source and cannot be included directly in the repository, the following information will be documented:
-
-* Dataset Name
-* Original Source
-* Dataset URL / Reference
-* Dataset Format
-* Relevant Features
-* Intended Use
-
----
-
-## Current Phase Status
-
-Current Phase: Development / Implementation
-
-### Project Progress
-
-* [x] Project topic finalized
-* [x] Project title finalized
-* [x] Initial project architecture defined
-* [x] Mandatory repository structure created
-* [ ] Dataset collection and preparation
-* [ ] Resume preprocessing pipeline
-* [ ] Feature extraction
-* [ ] Machine Learning model development
-* [ ] Resume classification
-* [ ] Job recommendation module
-* [ ] User interface implementation
-* [ ] Model evaluation
-* [ ] Testing
-* [ ] Final documentation
-* [ ] Final deployment and demonstration
-
----
-
-## Future Enhancements
-
-* Deep Learning-based resume classification.
-* Advanced NLP-based skill extraction.
-* Semantic similarity-based job matching.
-* Integration with live job databases.
-* Personalized career-path recommendations.
-* Resume improvement suggestions.
-* Explainable AI for recommendation results.
-* Multi-language resume support.
-* Cloud-based deployment.
-
----
-
-## Disclaimer
-
-CareerSync is developed as an academic and educational project to demonstrate the application of Artificial Intelligence, Natural Language Processing, and Machine Learning in resume screening and job recommendation.
-
-The recommendations generated by the system should be considered supportive suggestions and not definitive employment decisions.
-
----
-
-## License
-
-This project is developed for academic and educational purposes.
+CareerSync — Learn. Adapt. Grow.
